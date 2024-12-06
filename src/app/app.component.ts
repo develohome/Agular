@@ -1,16 +1,30 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FooterComponent } from "./layout/footer/footer.component";
+import { HeaderComponent } from "./layout/header/header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FooterComponent, HeaderComponent],
   template: `
-    <h1>Welcome to {{title}}!</h1>
+    <header>
+      <app-header />
+    </header>
 
-    <router-outlet />
+    <main class="container">
+      <router-outlet />
+    </main>
+
+    <footer>
+      <app-footer />
+    </footer>
   `,
-  styles: [],
+  styles: `
+    main{
+      margin-top:66px;
+    }
+  `,
 })
 export class AppComponent {
   title = 'acompanhantes_v1';
