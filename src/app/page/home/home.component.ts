@@ -1,23 +1,24 @@
 import { Component } from '@angular/core';
-import { BannerComponent } from "./views/banner/banner.component";
-import { ListPremiumComponent } from "./views/list-premium/list-premium.component";
-import { ListPlusComponent } from "./views/list-plus/list-plus.component";
+import { BannerComponent } from "./components/banner/banner.component";
+import { ListPremiumComponent } from "./components/list-premium/list-premium.component";
+import { ListPlusComponent } from "./components/list-plus/list-plus.component";
+import { FiltrosHomeComponent } from "./components/filtros-home/filtros-home.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [BannerComponent, ListPremiumComponent, ListPlusComponent],
+  imports: [BannerComponent, ListPremiumComponent, ListPlusComponent, FiltrosHomeComponent],
   template: `
     <app-banner />
-     <section class="row mt-3">
-      <div class="col-4">
-
-      </div>
+    <section class="row mt-3">
+      <aside class="col-4">
+        <app-filtros-home />
+      </aside>
       <article class="col-8">
         <app-list-premium />
         <app-list-plus />
       </article>
-     </section>
+    </section>
   `,
   styles: `
     article{

@@ -15,6 +15,14 @@ import { Component } from '@angular/core';
       padding:0;
       margin:-10px 0 0 5px;
     }
+  h1{
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    
+  }
   `
 })
 export class LogoComponent {
