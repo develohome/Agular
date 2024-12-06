@@ -8,5 +8,6 @@ export const routes: Routes = [
     {path:'texto', loadComponent:()=>import('./page/texto/texto.component').then(m=>m.TextoComponent)},
     {path:'dicas', loadComponent:()=>import('./page/dica/dica.component').then(m=>m.DicaComponent)},
     {path:'contato', loadComponent:()=>import('./page/contato/contato.component').then(m=>m.ContatoComponent)},
-    {path:'perfil', loadComponent:()=>import('./page/perfil/perfil.component').then(m=>m.PerfilComponent)}
+    {path:'perfil', loadComponent:()=>import('./page/perfil/perfil.component').then(m=>m.PerfilComponent)},
+    {path:'details', loadComponent:()=>import('./page/details/details.component').then(m=>m.DetailsComponent)}
 ];

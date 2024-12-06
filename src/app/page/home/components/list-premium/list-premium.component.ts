@@ -3,11 +3,12 @@ import { UsersService } from '../../../../services/users.service';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CardsComponent } from "../../../../shared/cards/cards.component";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-list-premium',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, CardsComponent],
+  imports: [CommonModule, HttpClientModule, CardsComponent, RouterModule],
   template: `
     <div class="row mb-4">
       <div class="col-6">
@@ -17,7 +18,9 @@ import { CardsComponent } from "../../../../shared/cards/cards.component";
     </div>
     <div class="row">
       <div class="col-4 mb-2" *ngFor="let user of cards">
-        <app-cards [date]="user"/>
+        <a routerLink="../details">
+          <app-cards [date]="user"/>
+        </a>
       </div>
     </div>
   `,
