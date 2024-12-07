@@ -4,6 +4,7 @@ import { ListPremiumComponent } from "./components/list-premium/list-premium.com
 import { ListPlusComponent } from "./components/list-plus/list-plus.component";
 import { FiltrosHomeComponent } from "./components/filtros-home/filtros-home.component";
 
+
 @Component({
   selector: 'app-home',
   standalone: true,

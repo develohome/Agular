@@ -24,3 +24,21 @@ a h1{
     font-variation-settings:"wdth" 100;
     
 }
+
+.slide-card-btn button.btn{
+    border:none;
+  }
+.slide-card-btn  button img{
+    width:20px;
+    height: 20px;
+  }
+.slide-cards .main-body{
+    height:300px;
+    overflow:hidden;
+  }
+.slide-cards .main-body .slide{
+    height:inherit;
+    display:flex;
+    transition: ease-in-out .25s;
+  }
+ 

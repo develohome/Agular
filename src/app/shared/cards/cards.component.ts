@@ -22,8 +22,19 @@ import { Component, Input } from '@angular/core';
     </div>
   `,
   styles: `
+    .card img.check{
+      width:25% !important;
+    }
     .card{
       position:relative;
+      height:inherit;
+      width:100%;
+      background-color: transparent;
+      border:none;
+    }
+    .card-body{
+      overflow:hidden;
+      border:1px solid var(cinza) !important;
     }
     img.photoCard{
       border-radius:5px 5px 0 0;
@@ -35,7 +46,8 @@ import { Component, Input } from '@angular/core';
       top:20px;
       width:100px;
       text-align:center;
-      border-radius:0 50px 50px 0;
+      border-radius:0 50px 50px 0; 
+      padding:2px 10px;
       z-index:1;
     }
     img.check{

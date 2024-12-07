@@ -10,18 +10,18 @@ import { CardsComponent } from "../../../../shared/cards/cards.component";
     <article class="row mt-3 mb-3">
       <div class="col-12 ">
         <div class="row">
-          <div class="col-12 d-flex justify-content-end">
+          <div class="col-12 d-flex justify-content-end slide-card-btn">
             <div class="btn-group">
               <button type="button" style="background-color: var(--rosa);" class="btn" (click)="slideLeft()" [disabled]="numCardsSlide == 0">
                 <img src="../../../../../../assets/icons/chevron-left-solid.svg" alt="">
               </button>
-              <button type="button" style="background-color: var(--rosa);" class="btn btn-dark" (click)="slideRight()" [disabled]="numCardsSlide == cards.length-4">
+              <button type="button" style="background-color: var(--rosa);" class="btn" (click)="slideRight()" [disabled]="numCardsSlide == cards.length-4">
                 <img src="../../../../../../assets/icons/chevron-right-solid.svg" alt="">
               </button>
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row slide-cards">
           <div class="col-12 main-body">
             <div class="slide" style="width: calc(25%*{{cards.length}});margin-left:-{{marginSlide}};">
               <div *ngFor="let card of cards;let i = index" style="padding: 10px;">
@@ -37,38 +37,6 @@ import { CardsComponent } from "../../../../shared/cards/cards.component";
     article{
       border-top:1px solid var(--cinza);
       padding:10px 0;
-    }
-    button.btn{
-      border:none;
-    }
-    .main-body{
-      height:300px;
-      overflow:hidden;
-    }
-    button img{
-      width:20px;
-      height: 20px;
-    }
-    .slide{
-      height:inherit;
-      display:flex;
-      transition: ease-in-out .25s;
-    }
-    .card{
-      height:inherit;
-      width:25%;
-      background-color: transparent;
-      border:none;
-    }
-    .card-body{
-      background-color: transparent;
-      overflow:hidden;
-      border:1px solid var(cinza) !important;
-    }
-    .pacote{
-      position:absolute;
-      padding:2px 10px;
-      z-index:1;
     }
   `
 })
